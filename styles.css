@@ -5,6 +5,12 @@ html {
 	font-family: Nunito; font-size: 24px; font-style: normal; 
 }
 
+.fit {
+  max-width: 99%;
+  max-height: 99%;
+}
+
+
 .current{
 	background-color: #000531;
 	color: #fff;
