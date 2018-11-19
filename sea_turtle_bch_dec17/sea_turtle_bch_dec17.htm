@@ -1,0 +1,984 @@
+<HTML>
+<HEAD>
+<TITLE> FGDL Documentation </TITLE>
+<STYLE>
+          .pre { color: black; font-size: 12pt; font-weight: normal; font-family: courier; }
+	  strong {font-weight: normal; text-transform: uppercase; }
+</STYLE>
+</HEAD>
+<BODY>
+<table width="90%">
+<tr>
+<td>
+<strong><b>FLORIDA GEOGRAPHIC DATA LIBRARY DOCUMENTATION</b></strong><br />
+<p>
+<strong><b>TITLE: SEA TURTLE NESTING BEACHES IN FLORIDA - DECEMBER 2017</b></strong>
+</p>
+<pre>
+Geodataset Name:       SEA_TURTLE_BCH_DEC17
+Geodataset Type:       SHAPEFILE
+Geodataset Feature:    <strong>Polyline</strong>
+Feature Count:         222
+</pre>
+</td>
+</tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr>
+<td>
+<strong><b>GENERAL DESCRIPTION:</b></strong>
+<table width="650">
+<tr>
+<td>
+The State of Florida, through the Florida Fish and Wildlife Conservation Commission's Fish and Wildlife Research Institute, coordinates the Statewide Nesting Beach Survey program (SNBS). The SNBS was initiated in 1979 under a cooperative agreement between FWC and the U.S. Fish and Wildlife Service. Its purpose is to document the total distribution, seasonality, and abundance of nesting by sea turtles in Florida. Three species of sea turtles, the loggerhead (Caretta caretta), the green turtle (Chelonia mydas), and the leatherback (Dermochelys coriacea), nest regularly on Florida's beaches. Two other species, Kemp s ridley (Lepidochelys kempii) and the hawksbill (Eretmochelys imbricata) also nest but in very small numbers. All the species are listed as either Threatened or Endangered under the Endangered Species Act. Survey data are derived from observations of tracks and other nesting signs left on the beach by sea turtles. Species identifications and determinations of nesting vs. non-nesting emergences are based on the evaluation of visible features of the track and the nest. Data are gathered on more than 200 beaches through a network of permit holders consisting of private conservation groups, volunteers, consultants, academics, local governments, federal agencies, and the Florida Park Service. Nest density classifications of low, medium and high were developed for loggerheads, green turtles and leatherbacks according to quartile ranks. For loggerhead and green turtles, ranking was done within genetic subunits; ranks for leatherbacks were on a statewide basis. Hawksbill turtles and Kemp s ridleys are denoted only as present or absent on individual beaches. Surveys in the SNBS program may vary with respect to start/stop dates, frequency, duration and beach length between years for a particular beach, as well as between beaches. Survey results are used by managers to evaluate and minimize impacts to turtles and their nests due to human activities such as coastal construction, beach renourishment, and recreation, as well as to identify important areas for enhanced protection or land acquisition.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td></td></tr>
+<tr>
+<td>
+<pre>
+DATA SOURCE(S):                    Florida Fish and Wildlife Conservation Commission-Fish and Wildlife Research Institute, Statewide Nesting Beach Survey Program
+SCALE OF ORIGINAL SOURCE MAPS:     Unknown
+GEODATASET EXTENT:                 State of Florida<br />
+PUBLICATION DATE:                  20180709
+TIME PERIOD OF CONTENT:            Begin Date: 20130101    End Date: 20171231
+DOWNLOAD LINK:                     <A href="http://www.fgdl.org/metadataexplorer/explorer.jsp">http://www.fgdl.org/metadataexplorer/explorer.jsp</A>
+</pre>
+</td>
+</tr>
+</table>
+<P>
+<strong><b>FEATURE ATTRIBUTE TABLES:</b></strong>
+</P>
+<pre>Datafile Name: SEA_TURTLE_BCH_DEC17.DBF</pre>
+<table width="75%" cellspacing="0" cellpadding="0" border="0">
+<tr align="left">
+<td> ITEM NAME </td>
+<td>WIDTH</td>
+<td>TYPE</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">OBJECTID
+</DIV>
+</td>
+<td>4</td>
+<td>OID</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">Shape
+</DIV>
+</td>
+<td>4</td>
+<td>Geometry</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">Beach
+</DIV>
+</td>
+<td>50</td>
+<td>String</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">County
+</DIV>
+</td>
+<td>20</td>
+<td>String</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">ccGenSubUn
+</DIV>
+</td>
+<td>254</td>
+<td>String</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">ccMeanDens
+</DIV>
+</td>
+<td>8</td>
+<td>Double</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">ccCofVar
+</DIV>
+</td>
+<td>8</td>
+<td>Double</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">nYearsSurv
+</DIV>
+</td>
+<td>8</td>
+<td>Double</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">ccCount
+</DIV>
+</td>
+<td>8</td>
+<td>Double</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">ccDensClas
+</DIV>
+</td>
+<td>254</td>
+<td>String</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">cmMeanDens
+</DIV>
+</td>
+<td>8</td>
+<td>Double</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">cmCofVar
+</DIV>
+</td>
+<td>8</td>
+<td>Double</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">cmCount
+</DIV>
+</td>
+<td>8</td>
+<td>Double</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">cmDensClas
+</DIV>
+</td>
+<td>254</td>
+<td>String</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">dcMeanDens
+</DIV>
+</td>
+<td>8</td>
+<td>Double</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">dcCofVar
+</DIV>
+</td>
+<td>8</td>
+<td>Double</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">dcCount
+</DIV>
+</td>
+<td>8</td>
+<td>Double</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">dcDensClas
+</DIV>
+</td>
+<td>254</td>
+<td>String</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">eiCount
+</DIV>
+</td>
+<td>8</td>
+<td>Double</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">lkCount
+</DIV>
+</td>
+<td>8</td>
+<td>Double</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">eiPresent
+</DIV>
+</td>
+<td>5</td>
+<td>String</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">lkPresent
+</DIV>
+</td>
+<td>5</td>
+<td>String</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">cmGenSubUn
+</DIV>
+</td>
+<td>254</td>
+<td>String</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">meanSurvLe
+</DIV>
+</td>
+<td>8</td>
+<td>Double</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">DESCRIPT
+</DIV>
+</td>
+<td>50</td>
+<td>String</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">FGDLAQDATE
+</DIV>
+</td>
+<td>36</td>
+<td>Date</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">AUTOID
+</DIV>
+</td>
+<td>4</td>
+<td>Integer</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">SHAPE.LEN
+</DIV>
+</td>
+<td>0</td>
+<td>Double</td>
+</tr>
+</table>
+<p>
+<strong><b>FEATURE ATTRIBUTE TABLES CODES AND VALUES:</b></strong>
+</p>
+<P />
+<table width="75%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="30%">Item<pre></pre></td>
+<td>Item Description<pre></pre></td>
+</tr>
+<tr valign="top">
+<td>OBJECTID</td>
+<td>
+Internal feature number.<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>Shape</td>
+<td>
+Feature geometry.<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>Beach</td>
+<td>
+The name of the nesting beach survey.<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>County</td>
+<td>
+The Florida county in which the beach survey occured.<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>ccGenSubUn</td>
+<td>
+The genetic subunits identified for loggerheads nesting within Florida.<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>ccMeanDens</td>
+<td>
+The mean annual nesting density for loggerheads summarized over the survey years covered by these data. Nest density was defined as the number of nests per kilometer of surveyed nesting beach habitat.<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>ccCofVar</td>
+<td>
+The coefficient of variation of loggerhead nest density values.<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>nYearsSurv</td>
+<td>
+The number of years, during the last five, that the beach segment was surveyed (&lt;=5).<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>ccCount</td>
+<td>
+The total number of loggerhead nests observed on the beach segment during the five-year survey period.<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>ccDensClas</td>
+<td>
+Nest density classifications of  low ,  medium  and  high  were determined for each species for each survey area based on average nest densities during the five-year period to which these data apply. Nest density was defined as the number of nests per kilometer of surveyed nesting beach habitat. Quartile break values at 25 and 75 percent of the observations were used in assigning nesting beaches to the three density categories. Categories were assigned as follows:  low  = density values less than or equal to the lower 25%,  medium  = nest density values greater than 25% and less than or equal to 75%, and  high  = nest density values greater than 75%. Beaches with zero density values were excluded from the quartile ranking calculations. Density classifications for loggerheads (Caretta caretta) were calculated for each of the seven Florida genetic subunits (three on the east coast), after Shamblin et al. (Genetic structure of the southeastern United States loggerhead turtle nesting aggregation: evidence of additional structure within the peninsular Florida recovery unit, 2011, Marine Biology 158:571-587).<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>cmMeanDens</td>
+<td>
+The mean annual nesting density for green turtles summarized over the survey years covered by these data. Nest density was defined as the number of nests per kilometer of surveyed nesting beach habitat.<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>cmCofVar</td>
+<td>
+The coefficient of variation of green turtle nest density values.<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>cmCount</td>
+<td>
+The total number of green turtle nests observed on the beach segment during the five-year survey period.<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>cmDensClas</td>
+<td>
+Nest density classifications of low, medium and high were determined for each species for each survey area based on average nest densities during the five-year period to which these data apply. Nest density was defined as the number of nests per kilometer of surveyed nesting beach habitat. Quartile break values at 25 and 75 percent of the observations were used in assigning nesting beaches to the three density categories. Categories were assigned as follows: low = density values less than or equal to the lower 25%, medium = nest density values greater than 25% and less than or equal to 75%, and high = nest density values greater than 75%. Beaches with zero density values were excluded from the quartile ranking calculations. Density classifications for green turtles (Chelonia mydas) were calculated for each Florida genetic subunits after Shamblin et al. (2015).<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>dcMeanDens</td>
+<td>
+The mean annual nesting density for leatherbacks summarized over the survey years covered by these data. Nest density was defined as the number of nests per kilometer of surveyed nesting beach habitat.<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>dcCofVar</td>
+<td>
+The coefficient of variation of leatherback nest density values.<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>dcCount</td>
+<td>
+The total number of leatherback nests observed on the beach segment during the five-year survey period.<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>dcDensClas</td>
+<td>
+Nest density classifications of low, medium and high were determined for each species for each survey area based on average nest densities during the five-year period to which these data apply. Nest density was defined as the number of nests per kilometer of surveyed nesting beach habitat. Quartile break values at 25 and 75 percent of the observations were used in assigning nesting beaches to the three density categories. Categories were assigned as follows: low = density values less than or equal to the lower 25%, medium = nest density values greater than 25% and less than or equal to 75%, and high = nest density values greater than 75%. Beaches with zero density values were excluded from the quartile ranking calculations. Leatherback (Dermochelys coriacea) nesting data were classified relative to all statewide nesting beaches because unique genetic subunits within Florida have not yet been described for the species.<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>eiCount</td>
+<td>
+The total number of hawksbill nests observed on the beach segment during the five-year survey period.<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>lkCount</td>
+<td>
+The total number of Kemp's ridley nests observed on the beach segment during the five-year survey period.<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>eiPresent</td>
+<td>
+Eretmochelys imbricata (Hawksbill) occurrence during the five-year survey period. Occurrence is represented as yes (nesting by this species was observed) or no (nesting by this species was not observed).<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>lkPresent</td>
+<td>
+Lepidochelys kempii (Kemp's ridley) occurrence during the five-year survey period. Occurrence is represented as yes (nesting by this species was observed) or no (nesting by this species was not observed).<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>cmGenSubUn</td>
+<td>
+The genetic subunits identified for green turtles nesting within Florida after Shamblin et al. (2015).<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>meanSurvLe</td>
+<td>
+Beach survey length<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>DESCRIPT</td>
+<td>
+FGDL added field based on BEACH<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>FGDLAQDATE</td>
+<td>
+FGDL added field based on date downloaded from source.<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>AUTOID</td>
+<td>
+Unique ID added by GeoPlan<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>SHAPE.LEN</td>
+<td>
+Length in meters<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+</table>
+<table>
+<tr>
+<td>
+<pre></pre>
+</td>
+</tr>
+</table>
+<strong><b>USER NOTES:</b></strong>
+<br />
+<table width="500">
+<tr>
+<td>
+<pre>
+This data is provided 'as is'. GeoPlan relied on the integrity
+of the original data layer's topology
+</pre>
+</td>
+</tr>
+</table>
+<table width="500">
+<tr>
+<td>
+<pre>
+This data is provided 'as is' by GeoPlan and is complete to our
+knowledge.
+</pre>
+</td>
+</tr>
+</table>
+<table width="500">
+<tr>
+<td>
+<pre>
+GeoPlan relied on the integrity of the attribute information within
+the original data.
+</pre>
+</td>
+</tr>
+</table>
+<table width="500">
+<tr>
+<td>
+<pre>
+FWC s Statewide Nesting Beach Survey program encompassed an 
+annual average of 1,318 km of nesting beach during the referenced 
+period. This included most, but not all, of the nesting beaches in the 
+state, with the most significant gap in coverage in the Everglades region 
+of Monroe County. Annual nest counts for the state represent a minimum 
+estimate because not all nesting activity is recorded on surveyed beaches 
+and not all nesting beaches in Florida are surveyed. It should be noted that 
+sea turtles may use any sandy beaches for nesting. There are limitations to 
+the use of the SNBS database imposed by the data collection methodology 
+employed. Surveys in the SNBS program may vary with respect to start/stop 
+dates, frequency, duration and beach length between years for a particular 
+beach, as well as between beaches, making the data inappropriate for 
+assessing population trends. Trend evaluation is the goal of a complementary 
+FWRI program, the Index Nesting Beach Survey program (INBS) where 
+consistency in survey effort is accomplished by following a regime of 7 
+days/week monitoring during a set 109-day window, and maintaining 
+consistent survey boundaries. With some exceptions, including surveys 
+on geographically remote beaches, SNBS surveys typically capture the 
+majority of nesting activity on a particular beach. Surveys with less than 
+7 day/week frequency may result in underestimated nest totals; however, 
+most surveyors count all new nests observed when surveys are resumed, 
+thus reducing the error. Tracks are marked as having been evaluated 
+when the surveys are conducted. Determination of nesting success, i.e., 
+whether an emergence has resulted in eggs being deposited, or in a 
+"false crawl", is made using the visible features of the track and nest. 
+This can be challenging in areas where nest densities are high or in 
+situations where weather has erased the marks left in the sand by the 
+turtle. However, in a test on INBS beaches of the accuracy of surveyors 
+correctly distinguishing between nests and false crawls, the probability 
+that a nest counted by a surveyor was actually a nest was 96%. Nest 
+density classifications of low, medium and high were determined for 
+each species for each survey area based on average nest densities 
+during the five-year period to which these data apply. Nest density was 
+defined as the number of nests per kilometer of surveyed nesting beach 
+habitat. Quartile break values at 25 and 75 percent of the observations 
+were used in assigning nesting beaches to the three density categories. 
+Categories were assigned as follows: low = density values less than or 
+equal to the lower 25%, medium = nest density values greater than 25% 
+and less than or equal to 75%, and high = nest density values greater 
+than 75%. Beaches with zero density values were excluded from the 
+quartile ranking calculations. Density classifications for loggerhead 
+(Caretta caretta) and green (Chelonia mydas) turtles were calculated 
+for each of the genetic subunits, after Shamblin et al. (2011 and 2015). 
+Leatherback (Dermochelys coriacea) nesting data were classified relative 
+to all statewide nesting beaches because unique genetic subunits within 
+Florida have not yet been described for that species. Nest density values 
+were not calculated for Kemp s ridleys and hawksbills because of the 
+rareness of nesting by these species. Use of the quartile-based ranks 
+(low, medium, high) to compare the level of nesting activity across beaches 
+is recommended over the use of average nesting densities due to the 
+variation of survey parameters (e.g., frequency, duration) and the dynamic 
+nature of sea turtle nesting.<br /><br />
+</pre>
+</td>
+</tr>
+</table>
+<table width="500">
+<tr>
+<td>
+<pre>
+The State of Florida, through the Florida Fish and Wildlife Conservation 
+Commission's Fish and Wildlife Research Institute, coordinates the Statewide 
+Nesting Beach Survey program (SNBS). The SNBS was initiated in 1979 
+under a cooperative agreement between FWC (then DNR) and the U.S. 
+Fish and Wildlife Service. Its purpose is to document the total distribution, 
+seasonality, and abundance of nesting by sea turtles in Florida. Three 
+species of sea turtles, the loggerhead (Caretta caretta), the green turtle 
+(Chelonia mydas), and the leatherback (Dermochelys coriacea), nest 
+regularly on Florida's beaches. Two other species, Kemp s ridley 
+(Lepidochelys kempii) and the hawksbill (Eretmochelys imbricata) also nest 
+but in very small numbers. All the species are listed as either Threatened or 
+Endangered under the Endangered Species Act. Survey data are derived 
+from observations of tracks and other nesting sign left on the beach by sea 
+turtles. Species identifications and determinations of nesting vs. non-nesting 
+emergences are based on the evaluation of visible features of the track and 
+the nest. Data are gathered on more than 200 beaches through a network of 
+permit holders consisting of private conservation groups, volunteers, consultants, 
+academics, local governments, federal agencies, and the Florida Park Service. 
+Annual nest counts for the state represent a minimum estimate because not 
+all nesting activity is recorded on surveyed beaches and not all nesting beaches 
+in Florida are surveyed. Nest density classifications of low, medium and 
+high were developed for loggerheads, green turtles and leatherbacks 
+according to quartile ranks. For loggerhead and green turtles, ranking 
+was done within genetic subunits; ranks for and leatherbacks were on 
+a statewide basis. Hawksbill turtles and Kemp s ridleys were denoted 
+only as present or absent on individual beaches. Surveys in the SNBS 
+program may vary with respect to start/stop dates, frequency, duration 
+and beach length between years for a particular beach, as well as between 
+beaches. This variability in the surveys, combined with the dynamic nature 
+of sea turtle nesting activity, make the quartile ranking system for the beaches, 
+rather than average nesting densities over a small number of years, a more 
+appropriate measure of the level of nesting activity that takes place on a 
+particular beach. Survey results are used by managers to evaluate and 
+minimize impacts to turtles and their nests due to human activities such 
+as coastal construction, beach renourishment, and recreation, as well 
+as to identify important areas for enhanced protection or land acquisition. 
+Direct contact by managers with the appropriate state data provider is highly 
+recommended to obtain more detailed information about the surveys on a 
+particular beach.<br /><br />
+</pre>
+</td>
+</tr>
+</table>
+<table width="500">
+<tr>
+<td>
+<pre>
+This data is provided 'as is' and its horizontal positional accuracy
+has not been verified by GeoPlan<br /><br />
+</pre>
+</td>
+</tr>
+</table>
+<table width="500">
+<tr>
+<td>
+<pre>
+This data is provided 'as is' and its vertical positional accuracy
+has not been verified by GeoPlan<br /><br />
+</pre>
+</td>
+</tr>
+</table>
+<table width="550">
+<tr>
+<td>
+<pre>
+All data must be verified by Principle Investigator or Group Database Analyst 
+prior to release. It is strongly recommended that these data are directly acquired 
+from FWC and not indirectly through other sources which may have changed 
+the data in some way. FWC makes no claims as to suitability of these data for 
+other purposes. Acknowledgment of the Florida Fish and Wildlife Conservation 
+Commission's Fish and Wildlife Research Institute as the data source would 
+be appreciated in any products developed from these data. Such acknowledgment 
+as is standard for citation and legal practices for data source is expected by users 
+of these data. Please cite the original metadata when using portions of the record 
+to create a similar record of slightly altered data, such as reprojection. If any data 
+are modified or adjusted, please share the edited information with FWC. Users 
+should be aware that comparison with other data sets for the same area from 
+other time periods may be inaccurate due to inconsistencies resulting from 
+changes in mapping conventions, data collection, and computer processes 
+over time. FWC shall not be liable for improper or incorrect use of these data. 
+These data are not legal documents and are not to be used as such. It should 
+be noted that shapefiles consisting of Statewide survey areas are general representations.</pre>
+<br />
+</td>
+</tr>
+</table>
+<table width="550">
+<tr>
+<td>
+<pre>
+The Florida Geographic Data Library is a collection of Geospatial Data
+compiled by the University of Florida GeoPlan Center with support from
+the Florida Department of Transportation. GIS data available in FGDL is
+collected from various state, federal, and other agencies (data sources)
+who are data stewards, producers, or publishers. The data available in
+FGDL may not be the most current version of the data offered by the
+data source. University of Florida GeoPlan Center makes no guarantees
+about the currentness of the data and suggests that data users check
+with the data source to see if more recent versions of the data exist.
+
+Furthermore, the GIS data available in the FGDL are provided 'as is'.
+The University of Florida GeoPlan Center makes no warranties, guaranties
+or representations as to the truth, accuracy or completeness of the data
+provided by the data sources. The University of Florida GeoPlan Center
+makes no representations or warranties about the quality or suitability
+of the materials, either expressly or implied, including but not limited
+to any implied warranties of merchantability, fitness for a particular
+purpose, or non-infringement. The University of Florida GeoPlan Center
+shall not be liable for any damages suffered as a result of using,
+modifying, contributing or distributing the materials.
+
+A note about data scale: 
+
+Scale is an important factor in data usage.  Certain scale datasets
+are not suitable for some project, analysis, or modeling purposes.
+Please be sure you are using the best available data. 
+
+1:24000 scale datasets are recommended for projects that are at the
+county level.
+1:24000 data should NOT be used for high accuracy base mapping such
+as property parcel boundaries.
+1:100000 scale datasets are recommended for projects that are at the
+multi-county or regional level.
+1:125000 scale datasets are recommended for projects that are at the
+regional or state level or larger.
+
+Vector datasets with no defined scale or accuracy should be
+considered suspect. Make sure you are familiar with your data
+before using it for projects or analysis. Every effort has been
+made to supply the user with data documentation. For additional
+information, see the References section and the Data Source Contact
+section of this documentation. For more information regarding
+scale and accuracy, see our webpage at:
+http://geoplan.ufl.edu/education.html</pre>
+<br />
+</td>
+</tr>
+</table>
+<strong><b>REFERENCES: </b></strong>
+<table width="60%">
+<tr>
+<td>
+<pre>
+FFWCC-FWRI Turtle Nesting:
+http://myfwc.com/research/wildlife/sea-turtles/nesting/
+</pre>
+<br />
+</td>
+</tr>
+</table>
+<strong><b>DATA LINEAGE SUMMARY: </b></strong>
+<br />
+<table width="60%">
+<tr>
+<td>
+<pre>
+GeoPlan downloaded this data in shapefile format from the Florida Fish 
+and Wildlife Conservation Commission-Fish and Wildlife Research Institute 
+FTP site on August 2, 2018.
+The data was received  as a shapefile in projection: 
+NAD_1983_2011_Florida_GDL_Albers. The dataset was then projected from
+NAD_1983_2011_Florida_GDL_Albers to FGDL Albers HPGN using the
+NAD_1983_HARN_To_NAD_1983_2011 transformation
+
+- Added the field DESCRIPT based on BEACH.
+- Added the field FGDLAQDATE based on date downloaded from source.
+- Upcased all text in the attribute table.
+- Data set was renamed sea_turtle_bch_dec17 from sea_turtle_nest_density.
+Process Date: 20180806
+<br />
+Dataset copied.
+Process Date: 20180817
+<br />
+</pre>
+</td>
+</tr>
+</table>
+<strong><b>MAP PROJECTION PARAMETERS: </b></strong>
+<br />
+<pre>
+Projection                          ALBERS
+Datum                               HPGN
+Units                               METERS
+Spheroid                            GRS1980
+1st Standard Parallel               24  0  0.000
+2nd Standard Parallel               31 30  0.000
+Central Meridian                   -84 00  0.000
+Latitude of Projection's Origin     24  0  0.000
+False Easting (meters)              400000.00000
+False Northing (meters)             0.00000
+</pre>
+<p>
+<strong><b>DATA SOURCE CONTACT (S):</b></strong>
+</p>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td>
+<pre>
+Name:
+Abbr. Name:
+Address:
+
+
+Phone:
+
+Web site:
+E-mail:
+Contact Person:
+         Phone:
+        E-mail:
+</pre>
+</td>
+<td valign="top"><pre>Florida Fish and Wildlife Conservation Commission, Fish and Wildlife Research Institute
+FFWCC-FWRI
+100 Eighth Ave. SE
+St. Petersburg, FL
+33701
+727.896.8626
+<br />
+http://geodata.myfwc.com/pages/downloads
+SeaTurtleData@MyFWC.com
+
+</pre>
+</td>
+</tr>
+</table>
+<br />
+<strong><b>FGDL CONTACT:</b></strong>
+<pre>
+Name:                   FLORIDA GEOGRAPHIC DATA LIBRARY
+Abbr. Name:             FGDL
+Address:                Florida Geographic Data Library
+                        431 Architecture Building
+                        PO Box 115706
+                        Gainesville, FL  32611-5706
+Web site:               <a href="http://www.fgdl.org">http://www.fgdl.org</a>
+
+Contact FGDL: 
+
+      Technical Support:	        <a href="http://www.fgdl.org/fgdlfeed.html">http://www.fgdl.org/fgdlfeed.html</a>
+      FGDL Frequently Asked Questions:  <a href="http://www.fgdl.org/fgdlfaq.html">http://www.fgdl.org/fgdlfaq.html</a>
+      FGDL Mailing Lists:		<a href="http://www.fgdl.org/fgdl-l.html">http://www.fgdl.org/fgdl-l.html</a>
+      For FGDL Software:                <a href="http://www.fgdl.org/software.html">http://www.fgdl.org/software.html</a>
+</pre>
+</BODY>
+</HTML>
