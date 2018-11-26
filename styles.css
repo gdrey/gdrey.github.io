@@ -70,3 +70,9 @@ html {
 .body{
   font-family: Futura
 }
+
+.p {
+    font-family: Futura;
+    font-style: normal; 
+    color: #000000;
+}
