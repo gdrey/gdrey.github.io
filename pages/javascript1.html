@@ -1,12 +1,63 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-body, html {
-    height: 99%;
-    margin: 0;
-    padding: 0.25%;
+body, html{
+    background-color:#000000;
+    border-radius: 20px;
+    height:99%;
+    padding:0.25%;
+}
+
+p{
+    font-family:Futura;}
+
+div.gallery {
+    border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+    border: 0px solid #ffffff;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .responsive {
+        width: 100%;
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 ul#menu li {
@@ -14,24 +65,22 @@ ul#menu li {
     color:#ffffff;
     font-family: Futura;
     font-size: 25px;
-    padding: 2%;
-    text-align: left;
+    padding: 20px;
 }
 
-.bg {
+.bg1 {
     /* The image used */
-    background-image: url("https://gdrey.github.io/img/IMG_2783.jpg");
-    /*background-image: url("/Users/gadidreyfuss/Documents/GitHub/gdrey.github.io/img/update..gif");
+    /*background-image: url("https://gdrey.github.io/img/IMG_2783.jpg");
+    /*background-image: url("/Users/gadidreyfuss/Documents/GitHub/gdrey.github.io/img/IMG_3171.JPG");*/
 
     /* Full height */
-    height: 99%; 
 
     /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 25px;
-
+    background-color:#ffffff
 }
 
 .header {
@@ -45,17 +94,17 @@ ul#menu li {
 
 }
 .top-left {
-    position: absolute;
+    position: relative;
     top: 5%;
     left: 5%;
     font-size: 70px;
     font-family: Futura;
     font-style: normal; 
-    color: #ffffff;
+    color: #000000;
 
 }
 
-.other {
+.other{
     position: absolute;
     top: 90%;
     left: 80%;
@@ -79,15 +128,28 @@ ul#menu li {
 }
 </style>
 </head>
-<body style="background-color:#000000">
+<div class="bg1">
+<script>
+function myFunction() {
+    document.getElementById("demo").innerHTML = "Paragraph changed.";
+}
+</script>
+</head>
 
-<div class="top-left">gadi dreyfuss</div>
+<body>
+
+<h2>JavaScript in Head</h2>
+
+<p id="demo">A Paragraph.</p>
+
+<button type="button" onclick="myFunction()">Click this to change </button>
+<button type="button" onclick="myFunction()"> click </button>
 
 
-<div class="bg"></div>
-
-    <!--<div class="centered"><img src="https://gdrey.github.io/img/gif-bounce-arrow.gif"></div>-->
-   <!-- <div class="centered"><img src="/Users/gadidreyfuss/Documents/GitHub/gdrey.github.io/img/gif-bounce-arrow.gif" width="50%" height="50%"></div>-->
+<div style="padding:6px;">
+</div>
+</body>
+</div>
 
 <ul id="menu">
     <li> </li>
@@ -99,12 +161,7 @@ ul#menu li {
   <li> <a href="https://github.com/gdrey" style="color:#ffffff" target="_blank">github</a><strong style="font-size: 80%"> ↗</strong></li>
   <li> <a href="https://gdrey.github.io/index.html" style="color:#ffffff">contact</a></li>
 </ul>  
-
-</body>
 </html>
 
-
-<div class="footer">
-  <p>Footer</p>
-</div>
-
+</body>
+</html> 
