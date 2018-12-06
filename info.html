@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body, html{
-    background-color:#000000;
+    background-color:#ffffff;
     border-radius: 20px;
     height:99%;
     padding:0.25%;
@@ -51,57 +51,52 @@ text-align:center;
     border-radius: 25px;
     background-color:#ffffff
 }
-
-.header {
-    font-family: Futura;
-    font-size: 25px;
-    color: #ffffff;
-    position: absolute;
-    left: 5%;
-    padding: 20px
-
-
+.sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    border-style:5px solid red;
+    overflow-x: hidden;
+    padding-top: 20px;
+    border-right: 20px
 }
-.top-left {
-    position: relative;
-    top: 5%;
-    left: 5%;
-    font-size: 70px;
-    font-family: Futura;
-    font-style: normal; 
+
+.sidenav a {
+    padding: 6px 6px 10px 32px;
+    text-decoration: none;
+    font-family: Helvetica;
+    font-size: 20px;
+    font-weight:900;
     color: #000000;
-
+    display: block;
 }
 
-.other{
-    position: absolute;
-    top: 90%;
-    left: 80%;
-    font-size: 50px;
-    font-family: Times New Roman;
-    font-style: normal; 
-    color: #ffffff;
-}
-.centered {
-    position: absolute;
-    right: 50%;
-    bottom: 50%
-    font-size: 70px;
-    font-family: Futura;
-    color: #ffffff;
+.sidenav a:hover {
+    color: #808080;
 }
 
-.container {
-    position: absolute;
-    text-align: center;
-    color: white;
+.main {
+    margin-left: 200px; /* Same as the width of the sidenav */
 }
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
 </style>
-</head>
 
-<div class="bg1">
-<body>
-<div class="top-left"> Info
+<div class="sidenav">
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+
 </div>
 <body> 
     <div class="p"> 
