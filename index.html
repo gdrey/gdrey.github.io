@@ -3,11 +3,93 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-</style>
+body, html {
+  height: 100%;
+  margin: 0;
+}
 
-<body>
-<img src="https://gdrey.github.io/img/IMG_2783.jpg" width=50% height=50% align="middle">
-</p>
-</body>
+.bg {
+  /* The image used */
+  background-image: url("https://gdrey.github.io/img/IMG_5745.jpg");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color:000000;
+  border-radius:25px;
+}
+
+ul#menu li {
+    display:inline;
+    color:#ffffff;
+    font-family: Futura;
+    font-size: 25px;
+    padding: 2%;
+    text-align: left;
+
+}
+
+.top-left {
+  position:absolute;
+    top: 50%;
+    left:5%;
+    text-align: left;
+    font-size: 70px;
+    font-family: Futura;
+    color: #ffffff;
+}
+
+</style>
 </head>
+<body style="background-color:black;"> 
+<ul id="menu">
+
+    <li>menu_</li>
+      <li> <a href="https://gdrey.github.io/index.html" style="color:#ffffff">home</a></li>
+  <li> <a href="https://gdrey.github.io/info.html" style="color:#ffffff">info</a></li>
+  <li> <a href="https://gdrey.github.io/index.html" style="color:#ffffff">blog</a></li>
+      <li> <a href="https://gdrey.github.io/pages/portfoliolanding.html" style="color:#ffffff">portfolio</a></li>
+  <li> <a href="https://github.com/gdrey" style="color:#ffffff" target="_blank">github</a><strong style="font-size: 80%"> ↗</strong></li>
+  <li> <a href="https://gdrey.github.io/index.html" style="color:#ffffff">contact</a></li>
+</ul>  
+
+<div class="top-left">g a d i&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d r e y f u s s</div>
+
+<script>(function makeDiv(){
+    // vary size for fun
+    var divsize = ((Math.random()*100) + 50).toFixed();
+    var color = '#'+ Math.round(0xffffff * Math.random()).toString(16);
+    $newdiv = $('<div/>').css({
+        'width':divsize+'px',
+        'height':divsize+'px',
+        'background-color': color
+    });
+
+    // make position sensitive to size and document's width
+    var posx = (Math.random() * ($(document).width() - divsize)).toFixed();
+    var posy = (Math.random() * ($(document).height() - divsize)).toFixed();
+
+    $newdiv.css({
+        'position':'absolute',
+        'left':posx+'px',
+        'top':posy+'px',
+        'display':'none'
+    }).appendTo( 'body' ).fadeIn(100).delay(1000).fadeOut(500, function(){
+      $(this).remove();
+      makeDiv(); 
+    }); 
+})();
+</script>
+
+
+<button type="button" onclick="myFunction()">Try it</button>
+
+
+<div class="bg"></div>
+
+</body>
 </html>
