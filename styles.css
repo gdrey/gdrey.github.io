@@ -60,6 +60,7 @@ table {
 }
 .content {
   max-width: 55%;
+  position:relative;
   margin: auto;
   margin-top:15%;
   margin-bottom:15%;
@@ -75,9 +76,13 @@ table {
   width:55%;
   padding-top:10%;
   border-bottom: 1px solid;
-  padding-bottom:5px;
+  padding-bottom:10px;
   font-family: Times New Roman;
   font-size:25px;
+    font-weight: bold;
+
+  overflow:auto
+
 
 }
 
@@ -91,6 +96,7 @@ table {
   padding-top:5px;
   border-top: 1px solid;
   font-family: Times New Roman;
+  font-weight: bold;
 }
 
 }
@@ -132,9 +138,21 @@ a:active {
   color: blue;
 }
 
+img:hover {
+  opacity: 1.0;
+  filter: alpha(opacity=100); /* For IE8 and earlier */
+}
+img {
+  opacity: 0.5;
+  filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
 div.sticky {
   position: -webkit-sticky;
-  position: sticky;
-  top:20%;
+  position: sticky; 
+  top:;
   background-color: #f1f1f1;
   font-size: 20px;
+    overflow:auto;
+    display:flex;
+}
