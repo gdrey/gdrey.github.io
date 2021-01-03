@@ -1,38 +1,97 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="/styles.css" media="screen" />
-
+<meta charset="utf-8">
 <style>
-body {
-  background: #f1f1f1;
+    /* Add some padding on document's body to prevent the content
+    to go underneath the header and footer */
+    body{        
+        padding-top: 5%;
+        padding-bottom: 40px;
+        background: #f1f1f1;
+        font-size: 1.1em;
+
+      
+    }
+    .container{
+        margin: 0 auto; /* Center the DIV horizontally */
+        background: f1f1f1;
+        text-align:left;
+         max-width: 60%;
+         margin: auto;
+    }
+    .fixed-header, .fixed-footer{
+        width: 100%;
+        position: sticky;     
+        background: #f1f1f1;
+        color: #000000;
+        font-size: 2em;
+        
+    }
+    .fixed-header{
+        top: 0;
+        text-align: left;
+        background-color: #f1f1f1;
+
+    }
+    .fixed-footer{
+        bottom: 0;
+        text-align: center;
+        background-color: : #f1f1f1;
+    }    
+    /* Some more styles to beutify this example */
+    nav a{
+        color: #000000;
+        text-decoration: none;
+        display: inline-block;
+    }
+    .container p{
+        line-height: 0px; /* Create scrollbar to test positioning */
+    }
+img {
+  width: 100%;
+  height: auto;
 }
 </style>
 </head>
-<body>
+<body style="background-color:f1f1f1;">
+    <div class="fixed-header">
+        <div class="container">
+            <nav>
+                Gadi Dreyfuss
+            </nav>
+            <hr>
+        </div>
+    </div>
+      </br>
+  </br>
 
-<div class="content">
-  
-  <div class="header">
-  <h1> Gadi Dreyfuss </h1>
-  </div>
+    <div class="container">
+      <p> <a href="https://www.linkedin.com/in/gdrey/" target="_blank">LinkedIn</a> </p> 
+      <p> <a href="https://gadidreyfuss.wordpress.com/category/updates-feed/" target="_blank"> Blog (Personal)</a> </p>
+      <p> <a href="https://gadidreyfuss.wordpress.com/projects/" target="_blank"> Portfolio </a></p>
+  </br>
+  </br>
+  <img src="img/IMG_2645.jpeg">
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
 
-  <h1> Hi, I'm Gadi. </h1>
-<br>
-  <p>Links:</p.
- <br>
-
-<ul>
-  <li> <a href="https://www.linkedin.com/in/gdrey/">LinkedIn</a> 
-</li>
-  <li>Tea</li>
-  <li>Milk</li>
-</ul>
-  
-
-</div>
-</div>
-
+    <div class="fixed-footer"> <hr> ***     
+    </div>
 </body>
 </html>
