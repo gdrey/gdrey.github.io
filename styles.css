@@ -76,7 +76,7 @@ table {
   width:55%;
   padding-top:10%;
   border-bottom: 1px solid;
-  padding-bottom:10px;
+  padding-bottom:5px;
   font-family: Times New Roman;
   font-size:25px;
     font-weight: bold;
@@ -138,10 +138,6 @@ a:active {
   color: blue;
 }
 
-img:hover {
-  opacity: 1.0;
-  filter: alpha(opacity=100); /* For IE8 and earlier */
-}
 img {
   opacity: 0.5;
   filter: alpha(opacity=50); /* For IE8 and earlier */
@@ -150,8 +146,9 @@ img {
 div.sticky {
   position: -webkit-sticky;
   position: sticky; 
-  top:;
+  top:0;
   background-color: #f1f1f1;
+  z-index:999; /*Add this*/
   font-size: 20px;
     overflow:auto;
     display:flex;
