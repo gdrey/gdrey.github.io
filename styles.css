@@ -76,7 +76,7 @@ table {
   width:55%;
   padding-top:10%;
   border-bottom: 1px solid;
-  padding-bottom:10px;
+  padding-bottom:5px;
   font-family: Times New Roman;
   font-size:25px;
     font-weight: bold;
@@ -148,7 +148,7 @@ div.sticky {
   position: sticky; 
   top:0;
   background-color: #f1f1f1;
-  z-index:1; /*Add this*/
+  z-index:999; /*Add this*/
   font-size: 20px;
     overflow:auto;
     display:flex;
