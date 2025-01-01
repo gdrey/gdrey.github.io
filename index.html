@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D Rotating Globe</title>
+    <title>Interactive 3D Globe</title>
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            overflow: hidden; /* Prevent scrollbars */
+            transition: background-color 0.5s, color 0.5s;
+            background-color: #f0f0f0; /* Default light background */
+            color: black; /* Default text color */
         }
 
         header {
@@ -45,15 +47,14 @@
     </style>
 </head>
 <body>
-    <!-- Header Section -->
     <header>
         <h1>Gadi Dreyfuss</h1>
         <div id="globe-container"></div>
     </header>
 
-    <!-- Include the Three.js library -->
+    <!-- Include Three.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <!-- Include your local globe.js -->
+    <!-- Include your custom JS -->
     <script src="./globe.js"></script>
 </body>
 </html>
