@@ -1,15 +1,15 @@
 // Create the Scene, Camera, and Renderer
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000); // Adjust aspect ratio for square canvas
+const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
 const renderer = new THREE.WebGLRenderer({ alpha: true }); // Transparent background
-renderer.setSize(200, 200); // Set the globe size
+renderer.setSize(200, 200); // Globe size
 document.getElementById('globe-container').appendChild(renderer.domElement);
 
-// Create a Sphere Geometry for the Globe
+// Create the Sphere Geometry for the Globe
 const geometry = new THREE.SphereGeometry(5, 32, 32);
 
-// Load the Globe Texture
-const texture = new THREE.TextureLoader().load('./assets/globe.jpg'); // Relative path to the globe texture
+// Load the Custom Globe Texture
+const texture = new THREE.TextureLoader().load('./assets/globe.jpg'); // Update with your file's path
 const material = new THREE.MeshBasicMaterial({ map: texture });
 const globe = new THREE.Mesh(geometry, material);
 scene.add(globe);
@@ -17,7 +17,7 @@ scene.add(globe);
 // Set the Camera Position
 camera.position.z = 15;
 
-// Add Animation Loop
+// Globe Rotation Animation
 function animate() {
     requestAnimationFrame(animate);
     renderer.render(scene, camera);
@@ -42,22 +42,32 @@ document.addEventListener('mousemove', (event) => {
     if (isDragging) {
         const deltaMove = {
             x: event.clientX - previousMousePosition.x,
-            y: event.clientY - previousMousePosition.y,
         };
 
-        globe.rotation.y += deltaMove.x * 0.01; // Adjust rotation sensitivity
-        globe.rotation.x += deltaMove.y * 0.01;
-    }
+        // Adjust the globe's rotation
+        globe.rotation.y += deltaMove.x * 0.01;
 
-    previousMousePosition = {
-        x: event.clientX,
-        y: event.clientY,
-    };
+        // Determine which part of the image is visible
+        const visibleAngle = (globe.rotation.y % (2 * Math.PI)) / Math.PI; // Normalized rotation (0 to 2)
+        if (visibleAngle > 0.25 && visibleAngle < 0.75) {
+            // Middle (dark) section is visible
+            document.body.style.backgroundColor = '#333';
+            document.body.style.color = 'white';
+        } else {
+            // Light sections are visible
+            document.body.style.backgroundColor = '#f0f0f0';
+            document.body.style.color = 'black';
+        }
+
+        previousMousePosition = {
+            x: event.clientX,
+        };
+    }
 });
 
-// Adjust Camera and Renderer on Window Resize (Optional for this case)
+// Adjust Renderer and Camera on Window Resize
 window.addEventListener('resize', () => {
-    renderer.setSize(200, 200); // Keep the globe size constant
-    camera.aspect = 1; // Maintain square aspect ratio
+    renderer.setSize(200, 200);
+    camera.aspect = 1;
     camera.updateProjectionMatrix();
 });
