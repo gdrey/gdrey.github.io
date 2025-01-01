@@ -8,7 +8,7 @@ document.getElementById('globe-container').appendChild(renderer.domElement);
 // Create the Sphere Geometry for the Globe
 const geometry = new THREE.SphereGeometry(5, 32, 32);
 
-// Load the Custom Globe Texture
+// Load the Globe Texture
 const texture = new THREE.TextureLoader().load('./assets/globe.jpg'); // Update with your file's path
 const material = new THREE.MeshBasicMaterial({ map: texture });
 const globe = new THREE.Mesh(geometry, material);
@@ -44,30 +44,39 @@ document.addEventListener('mousemove', (event) => {
             x: event.clientX - previousMousePosition.x,
         };
 
-        // Adjust the globe's rotation
         globe.rotation.y += deltaMove.x * 0.01;
-
-        // Determine which part of the image is visible
-        const visibleAngle = (globe.rotation.y % (2 * Math.PI)) / Math.PI; // Normalized rotation (0 to 2)
-        if (visibleAngle > 0.25 && visibleAngle < 0.75) {
-            // Middle (dark) section is visible
-            document.body.style.backgroundColor = '#333';
-            document.body.style.color = 'white';
-        } else {
-            // Light sections are visible
-            document.body.style.backgroundColor = '#f0f0f0';
-            document.body.style.color = 'black';
-        }
-
         previousMousePosition = {
             x: event.clientX,
         };
     }
 });
 
-// Adjust Renderer and Camera on Window Resize
-window.addEventListener('resize', () => {
-    renderer.setSize(200, 200);
-    camera.aspect = 1;
-    camera.updateProjectionMatrix();
+// Add Scroll Bar Interactivity
+const scrollThumb = document.getElementById('scroll-thumb');
+const scrollBar = document.getElementById('scroll-bar');
+let isScrolling = false;
+
+scrollBar.addEventListener('mousedown', (event) => {
+    isScrolling = true;
+    const rect = scrollBar.getBoundingClientRect();
+    const position = Math.min(Math.max(event.clientX - rect.left, 0), rect.width);
+    updateScrollThumb(position, rect.width);
 });
+
+document.addEventListener('mouseup', () => {
+    isScrolling = false;
+});
+
+document.addEventListener('mousemove', (event) => {
+    if (isScrolling) {
+        const rect = scrollBar.getBoundingClientRect();
+        const position = Math.min(Math.max(event.clientX - rect.left, 0), rect.width);
+        updateScrollThumb(position, rect.width);
+    }
+});
+
+function updateScrollThumb(position, maxWidth) {
+    scrollThumb.style.left = `${position}px`;
+    const normalizedPosition = position / maxWidth;
+    globe.rotation.y = normalizedPosition * Math.PI * 2; // Normalize to full rotation
+}
