@@ -12,6 +12,7 @@
             background-color: #f0f0f0; /* Default light background */
             color: black; /* Default text color */
             display: flex;
+            flex-direction: column;
         }
 
         header {
@@ -46,31 +47,39 @@
             display: block;
         }
 
-        #sidebar {
-            width: 200px;
-            padding: 20px;
+        #projects {
+            margin: 20px;
+            font-size: 1.2rem;
+        }
+
+        #scroll-bar-container {
+            width: 100%;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             background-color: #ddd;
-            height: 100vh;
-            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            bottom: 0;
         }
 
-        #sidebar ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
+        #scroll-bar {
+            width: 80%;
+            height: 10px;
+            background-color: #ccc;
+            border-radius: 5px;
+            position: relative;
+            cursor: pointer;
         }
 
-        #sidebar li {
-            margin: 10px 0;
-        }
-
-        #sidebar ul ul {
-            margin-left: 20px;
-        }
-
-        main {
-            flex: 1;
-            padding: 20px;
+        #scroll-thumb {
+            width: 20px;
+            height: 10px;
+            background-color: #888;
+            border-radius: 5px;
+            position: absolute;
+            left: 0;
         }
     </style>
 </head>
@@ -80,7 +89,8 @@
         <div id="globe-container"></div>
     </header>
 
-    <aside id="sidebar">
+    <div id="projects">
+        <h2>Projects</h2>
         <ul>
             <li>About me</li>
             <li>Projects
@@ -91,11 +101,13 @@
                 </ul>
             </li>
         </ul>
-    </aside>
+    </div>
 
-    <main>
-        <!-- Main content can go here -->
-    </main>
+    <div id="scroll-bar-container">
+        <div id="scroll-bar">
+            <div id="scroll-thumb"></div>
+        </div>
+    </div>
 
     <!-- Include Three.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
