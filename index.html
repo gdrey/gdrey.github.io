@@ -1,32 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Gadi - Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gadi</title>
+  <style>
+    /* Apply Times New Roman font and basic styles globally */
+    body {
+      font-family: "Times New Roman", serif;
+      min-height: 100vh; /* Ensure body takes full viewport height */
+      margin: 0;
+      padding: 0;
+      background-color: #f8f8f8; /* Uniform background color */
+      position: relative; /* Essential for absolute positioning of main content */
+      color: #000; /* Default text color changed to black */
+    }
+
+    /* Container for content to center it and set max-width */
+    .container {
+      max-width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 1.5rem; /* Equivalent to Tailwind's px-6 on md screens */
+      padding-right: 1.5rem; /* Equivalent to Tailwind's px-6 on md screens */
+    }
+
+    /* Styles for the fixed header */
+    header {
+      position: fixed;
+      top: 5vh; /* Adjusted: 5% from the top of the viewport */
+      left: 0;
+      width: 100%;
+      background-color: #f8f8f8; /* Match body background */
+      z-index: 10;
+      padding-top: 1rem; /* Equivalent to Tailwind's py-4 / 2 */
+      padding-bottom: 1rem; /* Equivalent to Tailwind's py-4 / 2 */
+    }
+
+    /* Styles for the main header text (gadi) */
+    header p {
+      font-size: 1.5rem; /* Equivalent to Tailwind's text-2xl */
+      font-weight: bold;
+      line-height: 1; /* Equivalent to Tailwind's leading-none */
+      color: #000; /* Changed to black */
+    }
+
+    /* Style for the horizontal rule - takes full width of its parent (the container) */
+    .wide-line {
+      border: none;
+      border-top: 1px solid #000; /* Changed to black */
+      width: 100%; /* Ensures it fills its container */
+      margin-top: 1rem; /* Equivalent to Tailwind's mt-4 */
+      margin-bottom: 0.5rem; /* Equivalent to Tailwind's mb-2 */
+    }
+
+    /* Main content area, absolutely positioned between fixed header and footer */
+    .main-content-area {
+      /* Adjusted: Ensures main content starts clearly after the header and ends before the footer */
+      top: calc(5vh + 5.5rem); /* Starts after header's full height (5vh + approx 5.5rem for header content/padding) */
+      bottom: calc(5vh + 5.25rem); /* Ends before footer's full height (5vh + approx 5.25rem for footer content/padding) */
+      left: 0;
+      right: 0;
+      position: absolute; /* Positions it relative to the body */
+      overflow-y: auto; /* Allows content to scroll if it overflows */
+      padding-top: 1.5rem; /* Increased padding-top for visual comfort for projects content */
+      padding-bottom: 1rem; /* Small internal padding for visual comfort */
+    }
+
+    /* Styles for project heading to make it sticky */
+    .projects-heading {
+      position: sticky; /* Makes the element stick */
+      top: 0; /* Sticks to the top of its scrollable parent */
+      background-color: #f8f8f8; /* Ensures content doesn't show through */
+      z-index: 5; /* Ensure it stays above scrolling content */
+      padding-top: 1rem; /* Adjusted: Increased padding above the sticky heading */
+      padding-bottom: 0.5rem; /* Add a little padding below the sticky heading */
+      margin-top: 0; /* Override default margin */
+      margin-bottom: 1rem; /* Keep existing margin-bottom for spacing to list */
+    }
+
+    /* Styles for project and contact headings */
+    .main-content-area p,
+    footer p {
+      font-size: 1.25rem; /* Equivalent to Tailwind's text-xl */
+      font-weight: bold;
+      color: #000; /* Changed to black */
+    }
+
+    /* Styles for the project list */
+    ul.list-none {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 1.125rem; /* Equivalent to Tailwind's text-lg */
+    }
+
+    ul.list-none li {
+      margin-bottom: 0.75rem; /* Equivalent to Tailwind's mb-3 */
+    }
+
+    ul.list-none li span.mr-2 {
+      margin-right: 0.5rem; /* Equivalent to Tailwind's mr-2 */
+    }
+
+    /* Styles for links */
+    a {
+      color: #2563eb; /* Equivalent to Tailwind's blue-600 */
+      text-decoration: none;
+      font-weight: 600; /* Equivalent to Tailwind's font-semibold */
+      transition: color 150ms ease-in-out, text-decoration 150ms ease-in-out; /* Equivalent to Tailwind transitions */
+    }
+
+    a:hover {
+      color: #1d4ed8; /* Equivalent to Tailwind's blue-800 */
+      text-decoration: underline;
+    }
+
+    /* Styles for description text */
+    span.text-gray-700 {
+      color: #4a5568; /* Keeping description text as dark gray for contrast */
+    }
+
+    /* Styles for the fixed footer */
+    footer {
+      position: fixed;
+      bottom: 5vh; /* Adjusted: 5% from the bottom of the viewport */
+      left: 0;
+      width: 100%;
+      background-color: #f8f8f8; /* Match body background */
+      padding-top: 1.5rem; /* Equivalent to Tailwind's py-6 / 2 */
+      padding-bottom: 1.5rem; /* Equivalent to Tailwind's py-6 / 2 */
+      z-index: 10;
+    }
+
+    /* Responsive adjustments for medium screens and up */
+    @media (min-width: 768px) {
+      .container {
+        padding-left: 1.5rem; /* md:px-6 */
+        padding-right: 1.5rem; /* md:px-6 */
+      }
+      header p {
+        font-size: 1.875rem; /* md:text-3xl */
+      }
+      .main-content-area p,
+      footer p {
+        font-size: 1.5rem; /* md:text-2xl */
+      }
+    }
+  </style>
 </head>
-<body>
-  <div class="container">
-    <header>gadi</header>
+<body class="antialiased">
 
-    <hr class="static-line" id="top-line" />
-    <hr class="static-line" id="bottom-line" />
-
-    <div class="projects-mask">
-      <section class="projects">
-        <h2>projects</h2>
-        <div class="scrollable-content">
-          <ul>
-            <!--Projects -->
-            <li>⤷ <strong><a href="#">project 1</a></strong> description 1</li>
-            <li>⤷ <strong><a href="#">project 2</a></strong> description 2</li>
-          </ul>
-        </div>
-      </section>
+  <!-- Header - Fixed 5% from the top of the viewport -->
+  <header>
+    <div class="container">
+      <p>gadi</p>
+      <hr class="wide-line">
     </div>
+  </header>
 
-    <footer>contact</footer>
-  </div>
+  <!-- Main Content Area - Flows between the fixed header and footer -->
+  <main class="main-content-area">
+    <div class="container">
+      <p class="projects-heading">projects</p>
+      <ul class="list-none">
+        <li><span class="mr-2">⤷</span> <a href="#">project 1</a> description 4</li>
+        <li><span class="mr-2">⤷</span> <a href="#">project 2</a> description 4</li>
+        <li><span class="mr-2">⤷</span> <a href="#">project 3</a> description 4</li>
+        <li><span class="mr-2">⤷</span> <a href="#">project 4</a> description 4</li>
+        <li><span class="mr-2">⤷</span> <a href="#">project 5</a> description 5</li>
+        <li><span class="mr-2">⤷</span> <a href="#">project 6</a> description 6</li>
+        <li><span class="mr-2">⤷</span> <a href="#">project 7</a> description 7</li>
+        <li><span class="mr-2">⤷</span> <a href="#">project 8</a> description 8</li>
+        <li><span class="mr-2">⤷</span> <a href="#">project 9</a> description 9</li>
+        <li><span class="mr-2">⤷</span> <a href="#">project 10</a> description 10</li>
+        <li><span class="mr-2">⤷</span> <a href="#">project 11</a> description 11</li>
+        <li><span class="mr-2">⤷</span> <a href="#">project 12</a> description 12</li>
+        <li><span class="mr-2">⤷</span> <a href="#">project 13</a> description 13</li>
+        <li><span class="mr-2">⤷</span> <a href="#">project 14</a> description 14</li>
+        <li><span class="mr-2">⤷</span> <a href="#">project 15</a> description 15</li>
+      </ul>
+    </div>
+  </main>
+
+  <!-- Footer - Fixed 5% from the bottom of the viewport -->
+  <footer>
+    <div class="container">
+      <hr class="wide-line mb-4">
+      <p>contact</p>
+    </div>
+  </footer>
+
 </body>
 </html>

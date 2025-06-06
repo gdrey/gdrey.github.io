@@ -1,91 +1,65 @@
+/* Make page fill the viewport and space content evenly */
 html, body {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: "Times New Roman", serif;
   background: #fff;
-  color: #000;
-  overflow: hidden;
-}
-
-.container {
-  position: relative;
-  height: 100vh;
-}
-
-header {
-  position: absolute;
-  top: 10%;
-  left: 10%;
-  font-weight: bold;
-  font-size: 1.5em;
-  z-index: 2;
-}
-
-hr.static-line {
-  position: fixed;
-  width: 80%;
-  border: none;
-  border-top: 1px solid #333;
-  left: 10%;
-  z-index: 1;
-}
-
-#top-line {
-  top: calc(10% + 2em);
-}
-
-#bottom-line {
-  bottom: 10%;
-}
-
-.projects-mask {
-  position: absolute;
-  top: calc(10% + 2.1em);
-  bottom: 10%;
-  left: 10%;
-  width: 80%;
-  overflow: hidden;
-  z-index: 2;
-}
-
-.scrollable-content {
-  height: 100%;
-  overflow-y: scroll;
-  padding-right: 1em;
-}
-
-.projects h2 {
-  font-weight: bold;
-  margin: 0 0 1em 0;
-  padding-top: 1em;
-}
-
-.projects ul {
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-}
-
-.projects li {
-  margin-bottom: 1em;
+  font-family: "Times New Roman", serif;
   font-size: 1.1em;
 }
 
-footer {
-  position: absolute;
-  bottom: 5%;
-  left: 10%;
-  font-weight: bold;
-  z-index: 2;
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-/* Blue hyperlink style */
+.container {
+  max-width: 80%;
+  margin: auto;
+  text-align: left;
+  background: #fff;
+}
+
+.fixed-header {
+  padding-top: 1.5em;
+}
+
+.header-text {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 1em 0 0.5em 0;
+}
+
+.project-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+}
+
+.project-list li {
+  margin-bottom: 1em;
+}
+
 a {
   color: #0066cc;
   text-decoration: none;
+  font-weight: bold;
 }
 
 a:hover {
   text-decoration: underline;
+}
+
+.wide-line {
+  width: 80%;
+  margin: 0 auto;
+  border: none;
+  border-top: 1px solid #333;
+}
+
+.footer {
+  text-align: left;
+  padding: 1em 0;
 }
